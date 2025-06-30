@@ -22,5 +22,13 @@ intents.message_content = True
 
 client = MyClient(intents=intents)
 
+
 # Run the client using the loaded token
 client.run(TOKEN)
+
+client.run('') # Replace with your own token
+
+
+# Run the client using the loaded token
+client.run(TOKEN)
+
