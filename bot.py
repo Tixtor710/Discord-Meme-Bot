@@ -1,6 +1,11 @@
 import discord
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 def get_meme():
     response = requests.get('https://meme-api.com/gimme')
@@ -9,7 +14,7 @@ def get_meme():
 
 class MyClient(discord.Client):
     async def on_ready(self):
-        print('Logged on as {0}!'.format(self.user))
+        print(f'Logged on as {self.user}!')
 
     async def on_message(self, message):
         if message.author == self.user:
@@ -21,14 +26,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-
-
-# Run the client using the loaded token
 client.run(TOKEN)
-
-client.run('') # Replace with your own token
-
-
-# Run the client using the loaded token
-client.run(TOKEN)
-
