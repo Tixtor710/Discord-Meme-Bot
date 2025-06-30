@@ -1,4 +1,4 @@
-# Discord Meme Bot
+# Memetty
 
 A simple Discord bot built with Python that fetches and sends memes using a public API.  
 Users can type `$meme` in any server the bot is added to, and it'll respond with fresh meme content.
@@ -65,7 +65,7 @@ python bot.py
 ```
 
 > You should see:
-> `Logged on as MemeBot#1234!`
+> `Logged on as Memetty#1234!`
 
 ---
 
